@@ -78,6 +78,35 @@ def ex4():
 ex4()
 
 
+#Ex 4 varianta 2
+def rezolva_sistem(a, b, c, d, e):
+    for x in range(-10**3, 10**3):
+        for y in range(-10**3, 10**3):
+            for z in range(-10**3, 10**3):
+                for w in range(-10**3, 10**3):
+                    if a * x + b * y + c * z + d * w == e:
+                        return x, y, z, w
+    return None
+
+def ex4_var2():
+    # Pentru sistemul 2x + 3y + 4z + 5w = 10:
+    a = 1
+    b = 2
+    c = 3
+    d = 4
+    e = 5
+    solutie = rezolva_sistem(a, b, c, d, e)
+    if solutie is not None:
+        print("Solutia sistemului este:")
+        print(f"x = {solutie[0]}")
+        print(f'y = {solutie[1]}')
+        print(f'z = {solutie[2]}')
+        print(f'w = {solutie[3]}')
+    else:
+        print("Sistemul nu are solutie sau nu a fost gasita in intervalul dat.")
+ex4_var2()
+
+
 #Ex 5
 def nth_root(x, n, precision=50):
     #radacina = radacina * 10^50  | ridicare la puterea n
@@ -160,12 +189,11 @@ def ex7():
 #Ex 8
 def ex8():
     # Plec de la premisa ca fiecare punct y se gaseste la distanta egala pe axa Ox
-    Ox = 90 #lungimea intervalului pe axa Ox
     y = [1, 3, 2, 5, 7] #secventa de valori y
     suprafata = 0
     # Calculez aria aplicand metoda trapezului:
     for i in range(len(y) - 1):
-        suprafata += (y[i] + y[i + 1]) * (Ox / (len(y) - 1)) / 2
-        # aria = (baza mica + baza mare) * inaltime / 2
+        suprafata += (y[i] + y[i + 1]) * 1 / 2
+        # aria = (baza mica + baza mare) * inaltime / 2, unde "inaltimea" (distanta dintre x1 si x2) este 1
     print(suprafata)
 # ex8()
