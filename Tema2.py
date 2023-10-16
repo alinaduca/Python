@@ -14,14 +14,17 @@ def ex0():
 
 
 # Ex1
-def ex1():
-    # pentru exemplul {'a'....'z'}
-    z = [chr(cod_ascii) for cod_ascii in range(ord('a'), ord('a') + 26)]
+def generate_ascii_code(first_char, nr):
+    z = [chr(cod_ascii) for cod_ascii in range(ord(first_char), ord(first_char) + nr)]
     L = []
     for i in z:
         x = hex(ord(i))[2:]
         L += [x]
-    print(" ".join(L))
+    return L
+
+def ex1():
+    # pentru exemplul {'a'....'z'}    
+    print(" ".join(generate_ascii_code('a', 26)))
 # ex1()
 
 
@@ -75,7 +78,7 @@ def ex4():
 
     print("Solutiile sistemului de ecuatii:")
     print(solutions)
-ex4()
+# ex4()
 
 
 #Ex 4 varianta 2
@@ -104,7 +107,7 @@ def ex4_var2():
         print(f'w = {solutie[3]}')
     else:
         print("Sistemul nu are solutie sau nu a fost gasita in intervalul dat.")
-ex4_var2()
+# ex4_var2()
 
 
 #Ex 5
@@ -133,7 +136,7 @@ def ex5():
     n = 5
     result = nth_root(x, n, precision=50)
     print(f"{n}-radical din {x}: {result}")
-ex5()
+# ex5()
 
 
 #Ex 6
@@ -163,7 +166,7 @@ def ex6():
     n = 265
     p = 4
     print(genereaza_permutare(n, p, alfabet))
-ex6()
+# ex6()
 
 
 #Ex 7
@@ -184,6 +187,34 @@ def ex7():
                   ]
     generate_matrixes(matrix_list)
 # ex7()
+
+
+#Ex 7 varianta 2
+def calculate_matrixes(matrix_list):
+    matrixes = []
+    for matrix in matrix_list:
+        new_mat = []
+        for row in matrix:
+            new_mat.append([int(bit) for bit in bin(row)[2:].rjust(8, '0')])
+        matrixes.append(new_mat)
+    return matrixes
+
+def ex7_var2():
+    matrix_list = [
+                    [0x00, 0x00, 0xFC, 0x66, 0x66, 0x66, 0x7C, 0x60, 0x60, 0x60, 0x60, 0xF0, 0x00, 0x00, 0x00, 0x00],
+                    [0x00, 0x00, 0x00, 0x00, 0x00, 0xC6, 0xC6, 0xC6, 0xC6, 0xC6, 0xC6, 0x7E, 0x06, 0x0C, 0xF8, 0x00],
+                    [0x00, 0x00, 0x10, 0x30, 0x30, 0xFC, 0x30, 0x30, 0x30, 0x30, 0x36, 0x1C, 0x00, 0x00, 0x00, 0x00],
+                    [0x00, 0x00, 0xE0, 0x60, 0x60, 0x6C, 0x76, 0x66, 0x66, 0x66, 0x66, 0xE6, 0x00, 0x00, 0x00, 0x00],
+                    [0x00, 0x00, 0x00, 0x00, 0x00, 0x7C, 0xC6, 0xC6, 0xC6, 0xC6, 0xC6, 0x7C, 0x00, 0x00, 0x00, 0x00],
+                    [0x00, 0x00, 0x00, 0x00, 0x00, 0xDC, 0x66, 0x66, 0x66, 0x66, 0x66, 0x66, 0x00, 0x00, 0x00, 0x00]
+                  ]
+    for matrix in calculate_matrixes(matrix_list):
+        for line in matrix:
+            for element in line:
+                print(element, end="")
+            print(end="\n")
+        print(end="\n")
+ex7_var2()
 
 
 #Ex 8
