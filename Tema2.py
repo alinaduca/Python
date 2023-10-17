@@ -109,6 +109,56 @@ def ex4_var2():
         print("Sistemul nu are solutie sau nu a fost gasita in intervalul dat.")
 # ex4_var2()
 
+#Ex4 varianta3
+def gauss_elimination(coefficients, constants):
+    n = len(constants)
+    for i in range(n): #transformare in matrice superior triunghiulara
+        max_row = i
+        for k in range(i + 1, n):
+            if abs(coefficients[k][i]) > abs(coefficients[max_row][i]):
+                max_row = k
+        coefficients[i], coefficients[max_row] = coefficients[max_row], coefficients[i]
+        constants[i], constants[max_row] = constants[max_row], constants[i]
+        pivot = coefficients[i][i]
+        if pivot == 0:
+            raise ValueError("Sistemul este incompatibil sau are solutii infinite.")
+        for j in range(i, n):
+            coefficients[i][j] /= pivot
+        constants[i] /= pivot
+        for k in range(n):
+            if k != i:
+                factor = coefficients[k][i]
+                for j in range(i, n):
+                    coefficients[k][j] -= factor * coefficients[i][j]
+                constants[k] -= factor * constants[i]
+    solutions = [0] * n
+    for i in range(n):
+        solutions[i] = constants[i]
+    return solutions
+
+def ex4_var3():
+    coefficients = [[2, 1, -1, 3],
+                    [1, 1, 1, 6],
+                    [1, -1, 2, 2],
+                    [2, 2, 1, 3]]
+    constants = [4, 7, 0, 5]
+
+    solutions = gauss_elimination(coefficients, constants)
+    print("Solutiile sunt:", solutions)
+ex4_var3()
+
+# Transformarea matricei coeficienților într-o matrice superior triunghiulară:
+# Găsim rândul cu cel mai mare element în coloană și schimbăm rândurile astfel încât acest element să fie în rândul curent.
+# Facem coeficientul de pe coloana curentă și rândul curent să fie 1, împărțind întreg rând la
+# valoarea pivot (elementul de pe diagonala principală).
+# Eliminăm coeficienții sub și deasupra pivotului facându-i să fie 0. Asta se face prin scăderea unor linii din
+# altele, astfel încât matricea devine treptat superior triunghiulară.
+# După ce matricea coeficienților a fost transformată într-o matrice superior triunghiulară,
+# se pot calcula soluțiile sistemului. De la ultima ecuație la prima, se calculează valorile necunoscute folosind valorile deja calculate. 
+# Pentru fiecare coloană, programul găsește pivotul, care este primul element diferit de zero pe acea coloană. 
+# Dacă se găsește un pivot zero în timpul procesului de eliminare Gauss, programul va ridica o excepție pentru a indica că sistemul
+# este incompatibil sau are soluții infinite.
+
 
 #Ex 5
 def nth_root(x, n, precision=50):
