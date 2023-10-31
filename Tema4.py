@@ -25,7 +25,7 @@ def ex1():
     print("A U B =", union)
     print("A - B =", difference1)
     print("B - A =", difference2)
-# ex1()
+ex1()
 
 
 
@@ -81,7 +81,7 @@ def are_equal(d_1, d_2, depth):
 def ex3():
     d_1 = {'a': {'b': 0}, 's': 4, '.': 1, 'e': 1, 'h': 1, 'l': 1, 'p': 2, ' ': 2, 'A': 1, 'n': 1}
     d_2 = {'a': {'a': 3}, 's': 2, '.': 1, 'e': 1, 'h': 1, 'l': 1, 'p': 2, ' ': 2, 'A': 1, 'n': 1}
-    print(are_equal(d_1, d_2, 0))
+    print(are_equal(d_1, d_2, 0)[0])
 # ex3()
 
 
@@ -102,7 +102,7 @@ def build_xml_element(tag, content, **dict):
 
 def ex4():
     print(build_xml_element("a", "Hello there", href =" http://python.org ", _class =" my-link ", id= " someid "))
-ex4()
+# ex4()
 
 
 
@@ -229,5 +229,4 @@ def positional_arguments(*positions, **arguments):
 
 def ex9():
     print(positional_arguments(1, 2, 3, 4, x=1, y=2, z=3, w=5))
-
 # ex9()
