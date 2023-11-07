@@ -122,6 +122,7 @@ class Matrix:
                     result.data[i][j] += self.data[i][k] * other.data[k][j]
         return result
 
+    # method that allows iterating through all elements an apply a transformation over them
     def apply(self, func):
         for i in range(self.rows):
             for j in range(self.cols):
