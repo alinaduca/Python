@@ -9,3 +9,7 @@
 În **Tema5.py** am adăugat toate rezolvările problemelor propuse în cadrul [Laboratorului 5](https://gdt050579.github.io/python-course-fii/lab-4.html).
 
 În **Tema6.py** am adăugat toate rezolvările problemelor propuse în cadrul [Laboratorului 6](https://gdt050579.github.io/python-course-fii/lab-5.html).
+
+În **Lab7.py** am adăugat rezolvarea problemei bonus propuse în laboratorul din săptămâna 7 (*Construiți o histogramă în consolă pentru a mapa fișierele existente pe o partiție, prin categoriile de size din intervalul [100G,50G) [50G,10G) [10G,1G) [1G,100M) [100M,10M) [1M,100k) [100k,10k)*).
+
+În **Tema7.py** am adăugat toate rezolvările problemelor propuse în cadrul [Laboratorului 7](https://gdt050579.github.io/python-course-fii/lab-6.html).
