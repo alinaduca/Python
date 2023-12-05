@@ -13,3 +13,7 @@
 În **Lab7.py** am adăugat rezolvarea problemei bonus propuse în laboratorul din săptămâna 7 (*Construiți o histogramă în consolă pentru a mapa fișierele existente pe o partiție, prin categoriile de size din intervalul [100G,50G) [50G,10G) [10G,1G) [1G,100M) [100M,10M) [1M,100k) [100k,10k)*).
 
 În **Tema7.py** am adăugat toate rezolvările problemelor propuse în cadrul [Laboratorului 7](https://gdt050579.github.io/python-course-fii/lab-6.html).
+
+În folderul **Tema8** am adăugat toate rezolvările problemelor propuse corespunzătoare paginii [Lab 7](https://gdt050579.github.io/python-course-fii/lab-7.html) de pe site-ul disciplinei.
+
+La adresa https://github.com/alinaduca/Snake puteți găsi repository-ul unde va fi încărcat în continuare proiectul **Snake**. (Momentan repo-ul este privat, dar am trimis invite.)
