@@ -1,4 +1,4 @@
-# Python 🐍
+# Python <img align="left" src="https://img.icons8.com/?size=40&id=qBvOwZw81tVy&format=png">
 
 În **Tema2.py** am adăugat toate rezolvările problemelor propuse în cadrul [Laboratorului 2](https://github.com/vcraciun/python-2023/blob/main/L2/l2.txt).
 
