@@ -16,4 +16,4 @@
 
 În folderul **Tema8** am adăugat toate rezolvările problemelor propuse corespunzătoare paginii [Lab 7](https://gdt050579.github.io/python-course-fii/lab-7.html) de pe site-ul disciplinei.
 
-La adresa https://github.com/alinaduca/Snake puteți găsi repository-ul unde va fi încărcat în continuare proiectul **Snake**. (Momentan repo-ul este privat, dar am trimis invite.)
+La adresa https://github.com/alinaduca/Snake puteți găsi repository-ul unde este încărcat proiectul **Snake**.
